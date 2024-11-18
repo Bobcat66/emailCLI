@@ -21,10 +21,15 @@ class SMTPClient {
         this->password = password;
     }
 
-    int sendMsg(string subject, string msg, string recepient) {
+    int sendMsg(string subject, string content, string recepient) {
+
         MailMessage msg;
 
         msg.addRecipient(MailRecipient(MailRecipient::PRIMARY_RECIPIENT,recepient));
+        msg.setSender(this->username);
+        msg.setSubject(subject);
+        msg.setContent(content);
+
     }
     
     private:
