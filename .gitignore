@@ -1,1 +1,2 @@
-build_dir/
+build-dir/
+.vscode/
