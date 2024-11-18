@@ -29,7 +29,8 @@ class SMTPClient {
         msg.setSender(this->username);
         msg.setSubject(subject);
         msg.setContent(content);
-
+        
+        return 0;
     }
     
     private:
@@ -37,3 +38,8 @@ class SMTPClient {
     string username;
     string password;
 };
+
+int main() {
+    cout << "Hello, World";
+    return 0;
+}
